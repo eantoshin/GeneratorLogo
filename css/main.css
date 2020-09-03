@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: #000;/*#61b2b5;*/
+}
+
+/*svg_one*/
+#my_little_SVG {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+    .logo__title {
+        position: absolute;
+        color: #fff;
+        right: 0;
+        top: 40%;
+        z-index: 2;
+    }
+        .logo__name {
+            font-size: 44px;
+        }
+        .logo__name-small {
+            font-size: 25px;
+        }
+    .site-header-background {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+        #stop1,#stop1 {
+            transition: all 1s;
+        }
+        .jagged-top {
+            transition: 2s;
+        }
