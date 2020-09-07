@@ -45,13 +45,19 @@ let cssTricks = {
 
         let newColor1 = populate('#');
         let newColor2 = populate('#');
+        let newColor3 = populate('#');
+        let newColor4 = populate('#');
 
         document.getElementById("stop1").setAttribute('stop-color', newColor1);
         document.getElementById("stop2").setAttribute('stop-color', newColor2);
+        document.getElementById("stop3").setAttribute('stop-color', newColor3);
+        document.getElementById("stop4").setAttribute('stop-color', newColor4);
     },
     randomizeHeader: function () {
         let randD = arrPath[Math.floor(Math.random() * arrPath.length)];
+        let randD_2 = arrPath[Math.floor(Math.random() * arrPath.length)];
         document.getElementById('jagged-top').setAttribute('d', randD);
+        document.getElementById('jagged-top-2').setAttribute('d', randD_2);
     },
     randomizeBackgrounds: function () {
         cssTricks.randomizeHeader();

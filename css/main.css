@@ -1,3 +1,8 @@
+@font-face {
+    font-family: BrutalType;
+    src: url(../BrutalType-Medium.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -21,6 +26,7 @@ body {
     .logo__title {
         position: absolute;
         color: #fff;
+        font-family: "BrutalType";
         right: 0;
         top: 40%;
         z-index: 2;
@@ -32,13 +38,25 @@ body {
             font-size: 25px;
         }
     .site-header-background {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        width: 400px;
+        height: 400px;
         z-index: 1;
     }
         #stop1,#stop1 {
             transition: all 1s;
         }
         .jagged-top {
-            transition: 2s;
+            transition: all 2s;
+        }
+    .site-header-background-2 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 10%;
+        top: 30%;
+        z-index: 2;
+    }
+        .jagged-top-2 {
+            transition: all 2s;
         }
