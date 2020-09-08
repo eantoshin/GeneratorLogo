@@ -48,17 +48,23 @@ let cssTricks = {
         let newColor2 = populate('#');
         let newColor3 = populate('#');
         let newColor4 = populate('#');
+        let newColor5 = populate('#');
+        let newColor6 = populate('#');
 
         document.getElementById("stop1").setAttribute('stop-color', newColor1);
         document.getElementById("stop2").setAttribute('stop-color', newColor2);
         document.getElementById("stop3").setAttribute('stop-color', newColor3);
         document.getElementById("stop4").setAttribute('stop-color', newColor4);
+        document.getElementById("stop5").setAttribute('stop-color', newColor5);
+        document.getElementById("stop6").setAttribute('stop-color', newColor6);
     },
     randomizeHeader: function () {
         let randD = arrPath[Math.floor(Math.random() * arrPath.length)];
         let randD_2 = arrPath[Math.floor(Math.random() * arrPath.length)];
+        let randD_3 = arrPath[Math.floor(Math.random() * arrPath.length)];
         document.getElementById('jagged-top').setAttribute('d', randD);
         document.getElementById('jagged-top-2').setAttribute('d', randD_2);
+        document.getElementById('jagged-top-3').setAttribute('d', randD_3);
     },
     randomizeFonts: function () {
         let randF = arrFonts[Math.floor(Math.random() * arrFonts.length)];
