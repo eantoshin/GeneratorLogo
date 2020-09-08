@@ -25,6 +25,7 @@ const arrPath = [
     `M27.1,-52.3C36.4,-41.7,45.9,-36.8,55.9,-29.1C65.9,-21.3,76.5,-10.7,73.8,-1.6C71,7.5,55,15,44.8,22.4C34.6,29.9,30.2,37.3,23.7,40.8C17.2,44.2,8.6,43.7,-2.4,47.9C-13.4,52.1,-26.9,61,-34.7,58.3C-42.5,55.6,-44.8,41.4,-52.8,29.7C-60.9,18.1,-74.8,9,-74.5,0.09999999999999998C-74.3,-8.8,-59.9,-17.5,-48.7,-23.7C-37.5,-29.9,-29.5,-33.6,-21.9,-45.2C-14.4,-56.8,-7.2,-76.3,0.9,-77.8C9,-79.3,17.9,-62.9,27.1,-52.3Z`,
     `M34.1,-55.1C40,-55.7,37.7,-38.1,37.1,-25.9C36.5,-13.6,37.6,-6.8,34.9,-1.5000000000000002C32.3,3.8,25.9,7.5,24.8,16.8C23.8,26.1,28,40.9,24.7,44.1C21.4,47.3,10.7,38.9,-1.9,42.2C-14.6,45.5,-29.1,60.6,-34.2,58.5C-39.3,56.3,-34.9,37,-35,24.4C-35.2,11.7,-39.9,5.9,-38.9,0.5C-38,-4.8,-31.4,-9.5,-24.700000000000003,-10.899999999999999C-18.1,-12.200000000000003,-11.399999999999999,-10.200000000000003,-7.300000000000001,-10.600000000000001C-3.1000000000000014,-11,-1.5999999999999996,-13.799999999999997,6.3,-24.700000000000003C14.1,-35.6,28.2,-54.4,34.1,-55.1Z`
 ];
+const arrFonts = ['BrutalType','futurademic','Bully Normal','Didot-HTF-M96-Medium','c'];
 let cssTricks = {
     init: function () {
         cssTricks.randomizeBackgrounds();
@@ -59,12 +60,21 @@ let cssTricks = {
         document.getElementById('jagged-top').setAttribute('d', randD);
         document.getElementById('jagged-top-2').setAttribute('d', randD_2);
     },
+    randomizeFonts: function () {
+        let randF = arrFonts[Math.floor(Math.random() * arrFonts.length)];
+        let randF_2 = arrFonts[Math.floor(Math.random() * arrFonts.length)];
+        let logo__name = document.getElementById('logo__name');
+        let logo__nameSmall = document.getElementById('logo__name-small');
+        logo__name.style.fontFamily=randF;
+        logo__nameSmall.style.fontFamily=randF_2;
+    },
     randomizeBackgrounds: function () {
         cssTricks.randomizeHeader();
         setInterval(function () {
             cssTricks.randomizeHeader();
+            cssTricks.randomizeFonts();
             cssTricks.generate();
-        }, 4000);
+        }, 7000);
     }
 };
 

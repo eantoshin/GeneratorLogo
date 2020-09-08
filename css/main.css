@@ -1,7 +1,8 @@
-@font-face {
-    font-family: BrutalType;
-    src: url(../BrutalType-Medium.ttf);
-}
+@font-face{font-family:BrutalType;src:url(../fonts/BrutalType-Medium.ttf);}
+@font-face{font-family:futurademic;src: url(../fonts/futurademic.ttf);}
+@font-face{font-family:Bully Normal;src: url(../fonts/Bully_Normal.ttf);}
+@font-face{font-family:Didot-HTF-M96-Medium;src: url(../fonts/Didot-HTF-M96-Medium.ttf);}
+@font-face{font-family:c;src: url(../fonts/c.ttf);}
 
 * {
     padding: 0;
@@ -26,15 +27,16 @@ body {
     .logo__title {
         position: absolute;
         color: #fff;
-        font-family: "BrutalType";
         right: 0;
         top: 40%;
         z-index: 2;
     }
-        .logo__name {
+        #logo__name {
+            font-family: "BrutalType";
             font-size: 44px;
         }
-        .logo__name-small {
+        #logo__name-small {
+            font-family: "futurademic";
             font-size: 25px;
         }
     .site-header-background {
