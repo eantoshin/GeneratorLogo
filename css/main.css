@@ -28,10 +28,11 @@ body {
         position: absolute;
         color: #fff;
         width: 100%;
-        max-width: 250px;
+        max-width: 270px;
         text-align: left;
-        right: 10%;
+        right: 0;
         top: 40%;
+        height: 100px;
         z-index: 4;
     }
         #logo__name {
