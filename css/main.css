@@ -1,81 +1,116 @@
-@font-face{font-family:BrutalType;src:url(../fonts/BrutalType-Medium.ttf);}
-@font-face{font-family:futurademic;src: url(../fonts/futurademic.ttf);}
+:root {
+    --primary-bg: #000;
+    --text-color: #fff;
+    --container-width: 500px;
+    --animation-duration: 2s;
+}
+
+@font-face {
+    font-family: 'BrutalType';
+    src: url(../fonts/BrutalType-Medium.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futurademic';
+    src: url(../fonts/futurademic.ttf) format('truetype');
+    font-display: swap;
+}
+
 @font-face{font-family:Bully Normal;src: url(../fonts/Bully_Normal.ttf);}
 @font-face{font-family:Didot-HTF-M96-Medium;src: url(../fonts/Didot-HTF-M96-Medium.ttf);}
 @font-face{font-family:c;src: url(../fonts/c.ttf);}
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background: #000;/*#61b2b5;*/
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--primary-bg);
+    overflow: hidden;
 }
 
-/*svg_one*/
-#my_little_SVG {
+.logo-container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: var(--container-width);
+    height: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-    .logo__title {
-        position: absolute;
-        color: #fff;
-        width: 100%;
-        max-width: 270px;
-        text-align: left;
-        right: 0;
-        top: 40%;
-        height: 100px;
-        z-index: 4;
+
+.logo__title {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    color: var(--text-color);
+    transition: opacity var(--animation-duration) ease;
+}
+
+#logo__name, 
+#logo__name-small {
+    transition: all var(--animation-duration) ease;
+}
+
+#logo__name {
+    font-family: "BrutalType", sans-serif;
+    font-size: 3em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#logo__name-small {
+    font-family: "Futurademic", sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+.logo-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.logo-svg--large {
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
+
+.logo-svg--medium {
+    width: 200px;
+    height: 200px;
+    left: 20%;
+    top: 30%;
+    z-index: 2;
+}
+
+.logo-svg--small {
+    width: 100px;
+    height: 100px;
+    right: 50%;
+    bottom: 30%;
+    z-index: 2;
+}
+
+.shape-path {
+    transition: d var(--animation-duration) ease;
+}
+
+.logo__title.fade {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        width: 90vw;
+        height: 90vw;
     }
-        #logo__name {
-            font-family: "BrutalType";
-            font-size: 44px;
-        }
-        #logo__name-small {
-            font-family: "futurademic";
-            font-size: 25px;
-        }
-    .site-header-background {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        z-index: 1;
-    }
-        #stop1,#stop1 {
-            transition: all 1s;
-        }
-        .jagged-top {
-            transition: all 2s;
-        }
-    .site-header-background-2 {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        left: 10%;
-        top: 30%;
-        z-index: 2;
-    }
-        .jagged-top-2 {
-            transition: all 2s;
-        }
-    .site-header-background-3 {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        right: 30%;
-        bottom: 30%;
-        /*left: 30%;*/
-        /*top: 10%;*/
-        z-index: 0;
-    }
-        .jagged-top-3 {
-            transition: all 2s;
-        }
+}

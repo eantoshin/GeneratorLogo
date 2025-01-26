@@ -2,46 +2,49 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Generator Logo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Генератор логотипов Maximal - создание уникальных логотипов для цифровых проектов">
+    <title>Maximal Logo Generator</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <main class="logo-container" id="logo-container">
+        <header class="logo__title">
+            <h1 id="logo__name">Maximal</h1>
+            <p id="logo__name-small" aria-label="Слоган компании">Useful digital projects</p>
+        </header>
+        
+        <svg class="logo-svg logo-svg--large" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="gradient-1" x2="0%" y2="100%">
+                    <stop class="gradient-stop-1" offset="0%" stop-color="#FBDA61" />
+                    <stop class="gradient-stop-2" offset="100%" stop-color="#F76B1C" />
+                </linearGradient>
+            </defs>
+            <path class="shape-path" data-index="1" fill="url(#gradient-1)" transform="translate(100 100)" />
+        </svg>
 
-<div id="my_little_SVG">
-    <div class="logo__title">
-        <div id="logo__name">Maximal</div>
-        <div id="logo__name-small">Useful digital projects</div>
-    </div>
-    <svg viewBox="0 0 200 200" preserveAspectRatio="none" class="site-header-background">
-        <defs>
-            <linearGradient id="header-gradient" x2="0%" y2="100%">
-                <stop id="stop1" offset="0%" stop-color="#FBDA61" />
-                <stop id="stop2" offset="100%" stop-color="#F76B1C" />
-            </linearGradient>
-        </defs>
-        <path class="jagged-top" id="jagged-top" fill="url(#header-gradient)" d="" transform="translate(100 100)" />
-    </svg>
-    <svg viewBox="0 0 200 200" preserveAspectRatio="none" class="site-header-background-2">
-        <defs>
-            <linearGradient id="header-gradient-2" x2="0%" y2="100%">
-                <stop id="stop3" offset="0%" stop-color="#e03176" />
-                <stop id="stop4" offset="100%" stop-color="#c5bc62" />
-            </linearGradient>
-        </defs>
-        <path class="jagged-top-2" id="jagged-top-2" fill="url(#header-gradient-2)" transform="translate(100 100)" />
-    </svg>
-    <svg viewBox="0 0 200 200" preserveAspectRatio="none" class="site-header-background-3">
-        <defs>
-            <linearGradient id="header-gradient-3" x2="0%" y2="100%">
-                <stop id="stop5" offset="0%" stop-color="#c17c4a" />
-                <stop id="stop6" offset="100%" stop-color="#5c40ab" />
-            </linearGradient>
-        </defs>
-        <path class="jagged-top-3" id="jagged-top-3" fill="url(#header-gradient-3)" transform="translate(100 100)" />
-    </svg>
-</div>
+        <svg class="logo-svg logo-svg--medium" viewBox="0 0 200 200" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="gradient-2" x2="0%" y2="100%">
+                    <stop class="gradient-stop-1" offset="0%" stop-color="#e03176" />
+                    <stop class="gradient-stop-2" offset="100%" stop-color="#c5bc62" />
+                </linearGradient>
+            </defs>
+            <path class="shape-path" data-index="2" fill="url(#gradient-2)" transform="translate(100 100)" />
+        </svg>
 
-<script src="js/index.js"></script>
+        <svg class="logo-svg logo-svg--small" viewBox="0 0 200 200" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="gradient-3" x2="0%" y2="100%">
+                    <stop class="gradient-stop-1" offset="0%" stop-color="#c17c4a" />
+                    <stop class="gradient-stop-2" offset="100%" stop-color="#5c40ab" />
+                </linearGradient>
+            </defs>
+            <path class="shape-path" data-index="3" fill="url(#gradient-3)" transform="translate(100 100)" />
+        </svg>
+    </main>
 
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>
